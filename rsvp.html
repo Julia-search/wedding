@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP — Юля и Егор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Manrope:wght@400;500;700;800&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-inner">
+    <main class="rsvp-page">
+      <a class="back-link guide-back-link" href="index.html">← На главную</a>
+      <section class="rsvp-sheet">
+        <img src="форма заявки.png" alt="Фон страницы формы заявки" />
+      </section>
+
+      <section class="rsvp-form-section">
+        <form class="rsvp-form-embedded" id="rsvp-form">
+          <label>
+            <span>Имя и фамилия</span>
+            <input type="text" name="name" placeholder="Например, Анна Иванова" required />
+          </label>
+
+          <fieldset>
+            <legend>Сможете приехать?</legend>
+            <label class="option">
+              <input type="radio" name="attendance" value="Да, буду" required />
+              <span>Да, с радостью</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="attendance" value="К сожалению, нет" />
+              <span>Не смогу приехать</span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Будете с парой?</legend>
+            <label class="option">
+              <input type="radio" name="plus_one" value="Да" required />
+              <span>Да</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="plus_one" value="Нет" />
+              <span>Нет</span>
+            </label>
+          </fieldset>
+
+          <label>
+            <span>Комментарий</span>
+            <textarea
+              name="comment"
+              rows="4"
+              placeholder="Можно оставить пожелание, вопрос или важную деталь"
+            ></textarea>
+          </label>
+
+          <button class="button" type="submit">Отправить</button>
+        </form>
+
+        <div class="response-preview" id="response-preview">Здесь появится черновик ответа.</div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,408 @@
+:root {
+  --page-bg: #f7f0e7;
+  --shadow: 0 20px 60px rgba(84, 53, 34, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 223, 211, 0.4), transparent 30%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--page-bg) 100%);
+  color: #2f201b;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-scroll {
+  overflow-x: hidden;
+}
+
+.scroll-invite {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.invite-panel {
+  position: relative;
+  width: 100%;
+}
+
+.invite-panel--main {
+  box-shadow: var(--shadow);
+}
+
+.invite-panel img {
+  width: 100%;
+  height: auto;
+}
+
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+
+.hotspot--details,
+.hotspot--travel-main,
+.hotspot--rsvp-main,
+.hotspot--guide,
+.hotspot--travel-bottom,
+.hotspot--rsvp-bottom,
+.hotspot--guide-bottom,
+.hotspot--travel-guide,
+.hotspot--map-link {
+  border-radius: 999px;
+}
+
+.hotspot--travel-main {
+  top: 0.55%;
+  left: 8.4%;
+  width: 24.5%;
+  height: 1.9%;
+}
+
+.hotspot--rsvp-main {
+  top: 0.55%;
+  left: 36.6%;
+  width: 26%;
+  height: 1.9%;
+}
+
+.hotspot--guide {
+  top: 0.55%;
+  left: 66.4%;
+  width: 24.5%;
+  height: 1.9%;
+}
+
+.hotspot--rsvp-bottom {
+  top: 95.15%;
+  left: 27.2%;
+  width: 22.8%;
+  height: 1.55%;
+}
+
+.hotspot--guide-bottom {
+  top: 95.15%;
+  left: 52.1%;
+  width: 28.6%;
+  height: 1.55%;
+}
+
+.hotspot--travel-bottom {
+  top: 95.15%;
+  left: 3.2%;
+  width: 22.6%;
+  height: 1.55%;
+}
+
+.hotspot--travel-guide {
+  top: 95.9%;
+  left: 40.4%;
+  width: 20.8%;
+  height: 2.2%;
+}
+
+.hotspot--map-link {
+  top: 87.2%;
+  left: 34.4%;
+  width: 31%;
+  height: 2.8%;
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.95);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(176, 53, 103, 0.45);
+}
+
+.scroll-anchor {
+  position: absolute;
+  top: 33.2%;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.page-inner {
+  background:
+    radial-gradient(circle at top left, rgba(255, 220, 209, 0.42), transparent 28%),
+    linear-gradient(180deg, #faf4ed 0%, #f5ede3 100%);
+}
+
+.inner-page,
+.guide-page,
+.rsvp-page {
+  width: min(100% - 32px, 860px);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: #c65d82;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.guide-back-link {
+  margin-left: 4px;
+}
+
+.inner-hero,
+.rsvp-form,
+.mini-card,
+.place-card,
+.guide-intro article {
+  background: rgba(255, 248, 241, 0.9);
+  border: 1px solid rgba(47, 32, 27, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.inner-hero {
+  padding: 24px;
+}
+
+.eyebrow,
+.section-tag {
+  margin: 0 0 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #a04863;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.form-layout,
+.guide-intro,
+.places-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.rsvp-form,
+.mini-card,
+.place-card,
+.guide-intro article {
+  padding: 24px;
+}
+
+.rsvp-form {
+  gap: 18px;
+}
+
+.rsvp-form,
+.rsvp-form label,
+.rsvp-form fieldset {
+  display: grid;
+}
+
+.rsvp-form label,
+.rsvp-form fieldset {
+  gap: 10px;
+}
+
+.rsvp-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rsvp-form span,
+.rsvp-form legend {
+  font-weight: 700;
+}
+
+.option {
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(47, 32, 27, 0.14);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font: inherit;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #412a2b;
+  color: #fff7f1;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.response-preview {
+  margin-top: 16px;
+  min-height: 180px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px dashed rgba(47, 32, 27, 0.16);
+  white-space: pre-line;
+  color: #695852;
+}
+
+.feature-list,
+.check-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: inherit;
+}
+
+.guide-sheet,
+.rsvp-sheet {
+  position: relative;
+  width: min(100%, 760px);
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+
+.travel-sheet {
+  overflow: hidden;
+}
+
+.guide-sheet img,
+.rsvp-sheet img {
+  width: 100%;
+  height: auto;
+}
+
+.rsvp-form-section {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 18px 14px 0;
+}
+
+.rsvp-form-embedded {
+  display: grid;
+  gap: 14px;
+  padding: 24px 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 248, 0.96), rgba(255, 245, 242, 0.96)),
+    #fff9f7;
+  border: 1px solid rgba(198, 93, 130, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(185, 117, 133, 0.12);
+}
+
+.rsvp-form-embedded label,
+.rsvp-form-embedded fieldset {
+  display: grid;
+  gap: 8px;
+}
+
+.rsvp-form-embedded fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.rsvp-form-embedded span,
+.rsvp-form-embedded legend {
+  font-weight: 700;
+  color: #8f4662;
+}
+
+.rsvp-form-embedded .option {
+  display: grid;
+}
+
+.rsvp-form-embedded input,
+.rsvp-form-embedded textarea {
+  border-color: rgba(198, 93, 130, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.rsvp-form-embedded .button {
+  justify-self: start;
+  background: #c65d82;
+}
+
+.rsvp-form-section .response-preview {
+  margin-top: 14px;
+  background: rgba(255, 249, 248, 0.9);
+  border-color: rgba(198, 93, 130, 0.18);
+}
+
+@media (min-width: 760px) {
+  .form-layout,
+  .guide-intro,
+  .places-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .places-grid .place-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .guide-page,
+  .rsvp-page {
+    width: min(100% - 16px, 860px);
+    padding-top: 16px;
+  }
+
+  input,
+  textarea,
+  .button {
+    font-size: 16px;
+  }
+}
